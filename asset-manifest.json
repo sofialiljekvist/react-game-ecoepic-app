@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-game-ecoepic-app/static/css/main.e73b076e.css",
-    "main.js": "/react-game-ecoepic-app/static/js/main.e7c0425e.js",
+    "main.js": "/react-game-ecoepic-app/static/js/main.480909ee.js",
     "static/js/453.99871286.chunk.js": "/react-game-ecoepic-app/static/js/453.99871286.chunk.js",
     "static/media/galleria.png": "/react-game-ecoepic-app/static/media/galleria.880acf5c9512e7627cf7.png",
     "static/media/fabric.png": "/react-game-ecoepic-app/static/media/fabric.579fad82f7c95172fbc4.png",
@@ -23,11 +23,11 @@
     "static/media/industry.png": "/react-game-ecoepic-app/static/media/industry.c0a5da8e89697f859229.png",
     "index.html": "/react-game-ecoepic-app/index.html",
     "main.e73b076e.css.map": "/react-game-ecoepic-app/static/css/main.e73b076e.css.map",
-    "main.e7c0425e.js.map": "/react-game-ecoepic-app/static/js/main.e7c0425e.js.map",
+    "main.480909ee.js.map": "/react-game-ecoepic-app/static/js/main.480909ee.js.map",
     "453.99871286.chunk.js.map": "/react-game-ecoepic-app/static/js/453.99871286.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e73b076e.css",
-    "static/js/main.e7c0425e.js"
+    "static/js/main.480909ee.js"
   ]
 }
