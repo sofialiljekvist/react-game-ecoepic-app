@@ -1,0 +1,747 @@
+/* Sätter bakgrundsfärg och font-family för hela applikationen. */
+body{
+  background-color: #232323;
+  font-family: 'Orbitron';
+}
+
+/* CSS-kod för de bilder i form av pilar vi har för att klicka sig vidare eller ta sig tillbaka */
+.arrowForward{
+  width: 150px;
+  position: absolute;
+  bottom: 10px;
+  right: 2vw;
+  transform: rotate(90deg);/*Roterar pilen så den pekar framåt/höger*/
+  z-index: 10; /* Säkerställer att bilden lägger sig överst så att det går att klicka på den. */
+}
+
+.arrowBack{
+  width: 150px;
+  position: absolute;
+  margin-left:10px;
+  bottom: 0px;
+  left: 2vw;
+  transform: rotate(-90deg); /*Roterar pilen så den pekar bakåt/vänster*/
+  z-index: 10; /* Säkerställer att bilden lägger sig överst så att det går att klicka på den. */
+  opacity:100px;
+}
+/*CSS för pilar slutar*/
+
+/* CSS-kod för alla bakgrundsbilder */
+/* Gör så att alla bakgrundsbilder täcker hela sidan och ser även till att de inte repeteras. */
+.bgi{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin-top: -50px; /* Då vi har vår menyikon i höger hörnet var vi tvungna att ta -50px på bakgrundsbildens position för att 
+                        bilden även ska täcka in det översta området och vi inte ska få en svart kant/rand.  */
+}
+
+.secondHand{
+  background-image: url(img/secondhandbutik.JPG);
+}
+
+.question{
+  background-image: url(img/galleria.png);
+}
+
+.fashionStore{
+  background-image: url(img/fashionstore.JPG);
+}
+
+.answer{
+  background-image: url(img/galleria.png);
+}
+/* CSS-kod för bakgrundsbilder slutar. */
+
+/* CSS-kod för menyn */
+.navigation-overlay {
+  height: 500px;
+  background-color: #bae9e2;
+  position: fixed; /* Fixed position så att menyn alltid ligger kvar och inte flyttas runt, även om användaren scrollar på sidan. */
+  width: 90%;
+  bottom: 0;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;   
+  align-items: center;    
+  justify-content: center;  
+  opacity: 90%;
+  z-index: 15; /*styr ordningen på hur elementen/komponenterna ligger på skärmen, detta fall för att det ska ligga över allt bakom */
+}
+
+.menuButton{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menuButton img, .navigation-round img{
+  cursor: pointer; /* Gör om muspekaren till en 'liten hand' för att göra det extra tydligt vad som är klickbart. */
+}
+
+.oval-link{ /*Länkvägarna inom navigationen*/
+  display: block;   
+  width: 250px ;
+  height: 40px;
+  padding: 10px 20px;
+  background-color: #bae9e2;
+  border-radius: 30px;     
+  border: 2px solid black; 
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px 0;          
+}
+
+.navigation-round { /*Kryss-symbolen*/
+  height: 100px;              
+  width: 100px;                
+  background-color: #974744;    
+  border-radius: 90%;          
+  position: left;        
+  bottom: 20px;                
+  left: 0;                           
+  display: flex;              
+  justify-content: center;           
+  align-items: center;            
+}
+/* CSS-kod för menyn avslutas */
+
+/*CSS-kod för landingPage.jsx*/
+#landingPage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 200px;
+}
+
+p.landingPage{
+  color: #C0E5C7;
+  font-size: 6em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+
+.begin{ /*Start-knappen*/
+  width: 150px;
+  cursor: pointer; /* Gör om muspekaren till en 'liten hand' för att göra det extra tydligt vad som är klickbart. */
+  display: left;
+}
+/*CSS-kod för landingPage.jsx slutar*/
+
+/*CSS-kod för vyn info.jsx*/
+.infoWrapper h1{
+  text-transform: uppercase;
+  font-size: 4em;
+  color: #C0E5C7;
+  transform: rotate(-10deg); 
+  position: absolute;
+  left: 0;
+  top: 1em;
+  max-width: 50vw;
+}
+
+.info {
+  font-size: 1.6em;
+  width: 70vw;
+  margin-left: 10vw;
+  margin-top: 25vh;  
+  font-weight: bold;
+  color: #E2DBDB;
+}
+
+.info p.stickerInfo{
+  color: #F5EEA8;
+}
+/*CSS-kod för vyn info.jsx slutar*/
+
+/*CSS-kod för rubrik inom SecondHand och FashionStore*/
+.storeHeader{
+  color: #C0E5C7;
+  background-color: #232323;
+  opacity: 90%;
+  height: 130px;
+  width: 820px;
+  word-wrap: break-word; /*Delar upp texten så den lägger sig över flera rader*/
+  padding-top: 25px;
+  padding-left: 15px;
+  font-size: 2.2em;
+  position: relative;
+  top: 30px;
+  left: 300px;
+  border-radius:10px;
+}
+/*CSS-kod för rubrik slutar*/
+
+/*CSS-kod för vyn secondHand.jsx*/
+.shirtButton{ /*Stylar knappen som gör det möjligt att klicka på skjortan i bilden*/
+  background-color: white;
+  opacity: 10%;
+  width: 300px;
+  height: 320px;
+  position: relative;
+  top: 45px;
+  left: 250px;
+}
+
+.shirtButton:hover {
+  opacity: 30%;
+}
+/*CSS-kod för vyn secondHand.jsx slutar*/
+
+/*CSS-kod för vyn fashionStore.jsx*/
+.sweaterButton{ /*Stylar knappen som gör det möjligt att klicka på tröjan i bilden*/
+  background-color: white;
+  opacity: 10%;
+  width: 95px;
+  height: 130px;
+  position: relative;
+  top: 90px;
+  left: 750px;
+}
+
+.sweaterButton:hover {
+  opacity: 30%;
+}
+/*CSS-kod för vyn fashionStore.jsx slutar*/
+
+/*CSS-kod för ClothesCard*/
+.clothesCard-overlay{ /*stylar positionering av clothesCard och att det öppnas ovanpå innehållet*/
+  position: absolute;
+  width: 90%;
+  bottom: 0;
+  border-radius: 0%;
+  display: flex;
+  flex-direction: column;   
+  align-items: center;    
+  justify-content: center;  
+  z-index: 10; /*Placerar clothesCard ovanpå innehållet i vyn*/
+}
+
+.clothesCard{
+  width: 282px;
+}
+
+.clothesCard-img{ /*Stylar krysset som används för att stänga ner ClothesCard*/
+  cursor: pointer; /* Gör om muspekaren till en 'liten hand' för att göra det extra tydligt vad som är klickbart. */
+  padding: 5px;
+}
+
+.clothesCard-body{
+  background-color: white;
+  height: 190px;
+}
+
+.clothesCard-text{
+  color: black;
+  text-align: left;
+  font-weight: bold;
+}
+
+.clothesCard-list{
+  list-style-type: none;
+  padding-left: 5px;
+  padding-top: 5px;
+  margin-bottom: 0;
+}
+
+.buyButton{ /*Stylar köp-knappen*/
+  background-color: #bae9e2;
+  color: black;
+  border: none;
+  font-weight: bold;
+  width: 110px;
+  margin-left: 140px;
+  margin-bottom: 30px;
+}
+
+.buyButton:hover{
+  opacity:30%;
+}
+/*CSS-kod för ClothesCard slutar*/
+
+/*CSS-kod för frågan om Co2-utsläpp i questionCo2.jsx och questionWater.jsx */
+.questionOverlay{ 
+  height: 400px;
+  background-color: #bae9e2;
+  width: 50%;
+  height: 55%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /*Centrerar innehållet (alltså texten) i själva diven (på den vertikala axeln)*/ 
+  opacity: 87%;
+}
+
+.questionText{
+  font-size: 1.5em;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+  font-weight: 800;
+}
+
+/*CSS-kod för svarsalternativen i questionCo2.jsx och questionWater.jsx */
+.answerOverlay { 
+  background-color: #232323;
+  width: 33%;
+  border-radius: 50%;
+  display: inline-flex; /*Används för att få alla svarsalternativ på en horisontell rad */
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer; /* Gör om muspekaren till en 'liten hand' för att göra det extra tydligt vad som är klickbart. */
+}
+
+.answersOptions { /*Tillhör en div som omsluter alla tre svarsalternativ. Denna finns för att centrera alla svaren och sätta storleken */
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  display:flex;
+  position:relative;
+
+}
+
+.answerOne{ /*Tillåter oss att styla svarsalternativ 1 separat (rotera och skapa mindre svart bubbla) */
+  transform: rotate(15deg); /*Roterar svarsalternativ 1 */
+  margin-right: 40px; /*Skapar mellanrum mellan den första och andra cirkeln av svarsalternativ*/
+  width: 20%;
+  font-size: 0.8em;
+}
+
+.answerThree{ /*Tillåter oss att styla svarsalternativ 3 separat (rotera och skapa större svart bubbla) */
+  transform: rotate(-10deg); /*Roterar svarsalternativ 3 */
+  margin-left: 30px; /*Skapar mellanrum mellan den sista och mittersta cirkeln av svarsalternativ*/
+  height: 30vh;
+  font-size: 1.3em;
+}
+
+.answerButton{ /*Stylar alla knappar med svarsalternativ*/
+  border: none;
+  margin: 30px;
+  color: #ffffff; 
+  background-color: #232323;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: center;
+}
+/*CSS-kod för frågan om Co2-utsläpp i questionCo2.jsx slutar */
+
+/*CSS-kod för kontrollfrågan, komponenten Sure inom areYouSure.jsx*/
+.sure-overlay{
+  height: 300px;
+  width: 60%;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left:280px;
+  border-radius: 90%;
+  text-align: center;
+  z-index:5; /*Placerar kontrollfrågan ovanpå resterande innehåll*/
+}
+
+.psure{
+  font-weight:bold;
+  font-size:1.5em;
+  position: relative;
+  top: 30%;
+}
+
+.answerSure{ /*länkvägarna, ja och nej*/
+  color: black;
+  font-size: 1.5em;
+  padding: 5px 10px;
+  font-weight: bold;
+  position: relative;
+  top: 30%;
+}
+/*CSS-kod för kontrollfrågan, komponenten Sure inom areYouSure.jsx slutar*/
+
+/*CSS-kod för svarsvyn answerCo2.jsx och answerWater.jsx. Stylar flera olika p-element*/
+.mindOverlay{
+  background-color: #bae9e2;
+  min-height: 100vh;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 90%;
+  font-weight: bold;
+}
+
+.userAnswer{
+  font-size: 1.5em;
+  padding-top: 2vh;
+  padding-left: 2vw;
+  transform: rotate(-5deg);
+}
+
+.correctAnswer{
+  text-align: center;
+  font-size: 2em;
+}
+
+.correct{
+  text-align: center;
+  font-size: 2em;
+  color: #9747FF;
+}
+
+.factText{
+  background-color: #fffcdf;
+  width: 780px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+.bym{
+  color: #9747FF; 
+  font-size: 3.5em;
+  font-weight: bolder;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: .5em;
+}
+
+.bymquestion{
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.byminfo{
+  font-family: 'Manrope', sans-serif;
+  font-size: 2em;
+  margin-left: 2vw;
+}
+
+.bymcompare{
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.1em;
+  margin-left: 2vw;
+  margin-top: -1.2em;
+  font-weight: 100;
+}
+ 
+/* Då vi använder oss av samma class-namn på all info på sidan answerCo2.jsx så använder vi oss av nth-of-type här för att kunna 
+  peka ut den andra instansen av class-namnet för att kunna styla den på ett eget sätt. Möjligen att det hade varit lättare att ha egen class, 
+  men då informationen var uppbyggd på exakt samma sätt kändes denna lösning lite bättre. */
+.fact:nth-of-type(2){
+  width: 40vw;
+  float: right;
+}
+
+.fact:nth-of-type(2) .bymquestion{
+  display: inline;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.fact:nth-of-type(2) .byminfo{
+  display: inline;
+}
+
+.fact:nth-of-type(2) .bymcompare{
+  text-align: center;
+  margin-top: -.2em;
+}
+/*CSS-kod för svarsvyn answerCo2.jsx slutar */
+
+/* CSS-kod för talkIntro.jsx */
+.talkIntro-h1{
+  font-weight: bold;
+  color:#C0E5C7;
+  font-size: 4em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.talkIntro-p{
+  color: black;
+  font-weight: bold;
+  width: 500px;
+  font-size: 1.6em;
+  padding-left: 70px;
+}
+
+.goodJob{
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.talkText{
+color: #9747FF;
+}
+
+.ovalInfo {
+  height: 400px;
+  background-color: #bae9e2;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /*Centrerar innehållet (alltså texten) i själva diven (på den vertikala axeln)*/ 
+  opacity: 87%;
+}
+/*CSS-kod för talkIntro.jsx slutar*/
+
+/* CSS-kod för graferna som visas i vyn talkAboutIt.jsx */
+.chartWrapper{
+  text-align: center;
+}
+
+.chartWrapper h1{
+  text-transform: uppercase;
+  font-size: 4em;
+  color: #C0E5C7;
+  transform: rotate(10deg); 
+  position: absolute;
+  right: 0;
+  top: 1em;
+  margin-right: 5px;
+}
+
+.chartWrapper h2{
+   text-align: center;
+   color: #fffcdf; 
+   font-size: 2em;
+   margin-top: 3.5em;
+}
+
+.chartWrapper h3{
+  text-align: center;
+  color: white; 
+  font-size: 1em;
+  margin-top: 3em;
+}
+
+.chartWrapper ul{
+  list-style-type: none;
+}
+
+.chartWrapper p{
+  color: #ffffff;
+  text-align: left;
+  margin-left: 200px;
+  margin-bottom: 0;
+}
+
+select{ /*Drop-downmenyerna*/
+  width: 100px;
+  height: 45px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  margin-top: 10px;
+  margin-right: 30px;
+  margin-left: 10px;
+}
+
+label{ /*Hör till drop-down, sätter färgen*/
+  color: white;
+}
+
+.viewChart{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+text{
+  fill: #fffcdf;
+  font-weight: bold;
+  font-Size: 1em;
+}
+
+.discussion{ /*Diskussionsfrågan*/
+  color: #fffcdf;
+  background-color: #9747FF;
+  width: 890px;
+  padding: 30px;
+  padding-left: 40px;
+  margin-top: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+/* CSS-kod för vyn talkAboutIt.jsx slutar */
+
+/* CSS-kod för alla stickers (bild inom vyerna secondHand, fashionStore och questionCo2 som leder till ledtråd) */
+.sticker { 
+  z-index: 1;
+  opacity: 50%;
+  width: 50px; /* Då vi har z-index och det här elementet riskerar att hamna ovanför andra klickbara element behöver vi begränsa bredden så att 
+                  vår sticker-bild bara tar upp så mycket plats som den behöver. */
+}
+
+/*Positionering av stickers inom de olika vyerna*/
+.chartWrapper .sticker{
+  position: relative;
+  top: 250px;
+  left: 160px;
+}
+
+.secondHand .sticker{
+  position: relative;
+  left: 50px;
+}
+
+.fashionStore .sticker{
+  position: relative;
+  left: 430px;
+  bottom: 50px;
+}
+
+.question .sticker{
+  position: relative;
+  left: 300px;
+  top: 150px;
+}
+/*CSS-kod för stickers slutar*/
+
+/*CSS-kod för ledtrådarna clue, clueCo2, listFabric och movieFashion. Dessa vyer länkas till vid klick på olika stickers*/
+/*Styling för komponenten Material inom listFabric.jsx*/
+.fabricWrapper h1{
+  font-size: 6em;
+  color:white;
+  text-align:center;
+}
+
+.fabricimg {
+  width:100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left:400px;
+  margin-top:15px;   
+}
+
+/*Styling av komponenten ClueCo2*/
+.clueCo2{
+  display: inline-flex; 
+  flex-direction: row;
+  gap: 50px;
+  margin-left:120px;
+  margin-top: 25px;
+}
+
+.clueCo2Text{
+  font-weight: bold;
+  background-color: #C0E5C7;
+  width: 350px;
+  height: 200px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.clueCo2Text2{
+  font-weight: bold;
+  background-color: #C0E5C7;
+  width: 300px;
+  height: 100px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.clueCo2-img{
+  position: relative;
+  top: 35px;
+  left: 250px;
+  margin-left: 80px;
+}
+
+/*Styling av komponenten MovieFashion */
+.movieBackground{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/*CSS-kod för clue.jsx (sticker i Talk about it. Styling på timeline,timelinecontent)*/
+/*Tidslinjen*/
+.horizontal-timeline .items {
+  border-top: 3px solid white; /*tjockleck och färgen på tidslinjen*/
+}
+
+.horizontal-timeline .items .items-list  {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  padding-top: 45px;
+  width: 23%; /* Sätter så att varje årtal och innehål tar upp en fjärdedel av tidslinjens bredd */
+  margin-right: 0;
+  color: white;
+}
+
+.horizontal-timeline .items .items-list:before { /*Skapar de nedåtgående strecken och placerar dem rätt på tidslinjen */
+  content: "";
+  position: absolute;
+  height: 36px;
+  border-right: 2px solid white;
+  top: 0;
+}
+
+.horizontal-timeline .items .items-list .event-date  {
+  position: absolute;
+  top: -30px; /* För att ha årtalen över bilderna */
+  left: 50%;
+  transform: translateX(-50%); /* Centrerar årtalen */
+  width: 110px;
+  font-size: 0.9rem;
+  padding-top: 8px;
+  color: black; /* texten på sifforna*/
+}
+
+.horizontal-timeline .items .items-list img {
+  width: 100%; /* Gör bilderna lika breda som deras container */
+  max-height: 100px; 
+  max-width:100px;
+  object-fit: contain; /* Förhindrar att bilderna blir förvrängda */
+  margin-top: 10px; /* Mellanrum mellan text och bild */
+  border-radius: 8px;
+}
+
+.bg-info{
+  background-color:#C0E5C7 !important; /*bakgrundsfärg på årtalen. Important = för att skriva över Bootstrap kodens förinställda färg */
+}
+
+.clickOnPic{  /*Tydliggör att bilderna är klickbara genom att visa hand-ikon i stället för default muspekaren.*/
+  cursor: pointer;
+  display: inline-flex; 
+  flex-direction: row;
+}
+
+.clickOnPic:hover{ /*Hovringseffekt på bilderna*/
+  opacity:30%;
+}
+
+.clueText{
+  text-align: left;
+  background-color: #bae9e2;
+  color:#232323;
+  padding: 10px;
+  border-radius: 10px;
+  width:300px;
+  z-index: 20;
+}
+
+.rubrik{
+  color:white;
+  margin-bottom:100px;
+  font-size: 3em;
+  text-align:center;
+}
